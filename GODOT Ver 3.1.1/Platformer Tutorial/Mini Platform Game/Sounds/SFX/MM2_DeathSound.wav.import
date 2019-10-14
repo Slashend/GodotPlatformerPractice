@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/MM2_DeathSound.wav-a445d5ffb3896233b6a44278f2e84961.sample"
+
+[deps]
+
+source_file="res://Sounds/SFX/MM2_DeathSound.wav"
+dest_files=[ "res://.import/MM2_DeathSound.wav-a445d5ffb3896233b6a44278f2e84961.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

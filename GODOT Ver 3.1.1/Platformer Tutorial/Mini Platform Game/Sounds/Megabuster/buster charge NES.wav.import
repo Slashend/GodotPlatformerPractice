@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/buster charge NES.wav-ff7a383231340f9983cad44dd58b50c8.sample"
+
+[deps]
+
+source_file="res://Sounds/Megabuster/buster charge NES.wav"
+dest_files=[ "res://.import/buster charge NES.wav-ff7a383231340f9983cad44dd58b50c8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

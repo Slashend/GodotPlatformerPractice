@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Noroi Noroi.wav-1adfbae1d5a2f6f9fb65f85a7c81a498.sample"
+
+[deps]
+
+source_file="res://Sounds/DIO Voices/Noroi Noroi.wav"
+dest_files=[ "res://.import/Noroi Noroi.wav-1adfbae1d5a2f6f9fb65f85a7c81a498.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

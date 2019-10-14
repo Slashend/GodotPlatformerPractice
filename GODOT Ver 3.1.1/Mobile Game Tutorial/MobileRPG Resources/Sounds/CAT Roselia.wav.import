@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/CAT Roselia.wav-a911b3590d6ede40bc8aeed5d1f203f0.sample"
+
+[deps]
+
+source_file="res://MobileRPG Resources/Sounds/CAT Roselia.wav"
+dest_files=[ "res://.import/CAT Roselia.wav-a911b3590d6ede40bc8aeed5d1f203f0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

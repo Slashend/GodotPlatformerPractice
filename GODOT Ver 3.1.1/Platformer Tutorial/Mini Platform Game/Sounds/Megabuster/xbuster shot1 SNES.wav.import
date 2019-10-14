@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/xbuster shot1 SNES.wav-a7ac153834cc5e5561fa270ec24edd18.sample"
+
+[deps]
+
+source_file="res://Sounds/Megabuster/xbuster shot1 SNES.wav"
+dest_files=[ "res://.import/xbuster shot1 SNES.wav-a7ac153834cc5e5561fa270ec24edd18.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,59 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Buch Sprites/47.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Buch Sprites/46.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Buch Sprites/50.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Buch Sprites/47 - Copy.png" type="Texture" id=5]
+[ext_resource path="res://Sounds/Megabuster/metal-slug-scream.wav" type="AudioStream" id=6]
+[ext_resource path="res://Sounds/Megabuster/buster shot hit wall.wav" type="AudioStream" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Dead",
+"speed": 0.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 22.6207 )
+
+[node name="Enemy" type="KinematicBody2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 2, 2 )
+frames = SubResource( 1 )
+animation = "Walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 2, 0.8 )
+scale = Vector2( 1.65, 1.025 )
+shape = SubResource( 2 )
+
+[node name="GroundRaycast" type="RayCast2D" parent="."]
+position = Vector2( 18, 0 )
+enabled = true
+cast_to = Vector2( 0, 25 )
+
+[node name="DisappearTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="KilledScream" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 6 )
+
+[node name="BulletHit" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 7 )
+[connection signal="timeout" from="DisappearTimer" to="." method="_on_DisappearTimer_timeout"]

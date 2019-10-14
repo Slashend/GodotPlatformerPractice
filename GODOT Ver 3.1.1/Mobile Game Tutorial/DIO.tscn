@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://MobileRPG Resources/Images/DIO/0.png" type="Texture" id=2]
+
+[node name="DIO" index="0" instance=ExtResource( 1 )]
+hp = 100
+damage = 25
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( -2.84217e-014, -1.13687e-013 )
+scale = Vector2( -0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="HPLabel" parent="." index="1"]
+text = "100hp"
+
+[node name="HoverInfo" parent="." index="4"]
+description = "DIO
+Oh lawd he comin"

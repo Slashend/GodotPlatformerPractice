@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/classicmegamanshooting.wav-43d205bd3337b17f6762261d0afeae40.sample"
+
+[deps]
+
+source_file="res://Sounds/Megabuster/classicmegamanshooting.wav"
+dest_files=[ "res://.import/classicmegamanshooting.wav-43d205bd3337b17f6762261d0afeae40.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

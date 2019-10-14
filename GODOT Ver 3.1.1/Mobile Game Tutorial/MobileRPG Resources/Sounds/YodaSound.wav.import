@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/YodaSound.wav-19122212bd55920ad9846451edc1eb4c.sample"
+
+[deps]
+
+source_file="res://MobileRPG Resources/Sounds/YodaSound.wav"
+dest_files=[ "res://.import/YodaSound.wav-19122212bd55920ad9846451edc1eb4c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

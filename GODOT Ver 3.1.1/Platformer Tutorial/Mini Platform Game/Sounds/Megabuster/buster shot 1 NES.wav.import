@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/buster shot 1 NES.wav-59ea33d9c0e5360c753a572fd02a2505.sample"
+
+[deps]
+
+source_file="res://Sounds/Megabuster/buster shot 1 NES.wav"
+dest_files=[ "res://.import/buster shot 1 NES.wav-59ea33d9c0e5360c753a572fd02a2505.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

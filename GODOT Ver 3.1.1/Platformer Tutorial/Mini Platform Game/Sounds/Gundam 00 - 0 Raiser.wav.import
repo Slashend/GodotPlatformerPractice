@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Gundam 00 - 0 Raiser.wav-c7722e2c8ebe4937bda30b9213a0b39f.sample"
+
+[deps]
+
+source_file="res://Sounds/Gundam 00 - 0 Raiser.wav"
+dest_files=[ "res://.import/Gundam 00 - 0 Raiser.wav-c7722e2c8ebe4937bda30b9213a0b39f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

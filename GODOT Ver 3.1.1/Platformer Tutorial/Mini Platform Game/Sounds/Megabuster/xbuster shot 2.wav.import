@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/xbuster shot 2.wav-fcf933c77d69997cc2d96b1ef2b2e8db.sample"
+
+[deps]
+
+source_file="res://Sounds/Megabuster/xbuster shot 2.wav"
+dest_files=[ "res://.import/xbuster shot 2.wav-fcf933c77d69997cc2d96b1ef2b2e8db.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

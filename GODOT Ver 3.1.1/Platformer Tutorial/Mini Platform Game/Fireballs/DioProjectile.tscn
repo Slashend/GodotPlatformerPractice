@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fireballs/DioProjectile.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/DIO/Gogogo/0.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "shoot",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[node name="DioProjectile" type="Area2D"]
+scale = Vector2( 2, 2 )
+script = ExtResource( 1 )
+damage = 15
+speed = 200
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.1, 0.1 )
+frames = SubResource( 1 )
+animation = "shoot"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 1.35, 0.75 )
+shape = SubResource( 2 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+scale = Vector2( 1.31406, 1 )
+rect = Rect2( -10.25, -7.5, 20.5, 15 )
+[connection signal="area_entered" from="." to="." method="_on_DioProjectile_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_DioProjectile_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

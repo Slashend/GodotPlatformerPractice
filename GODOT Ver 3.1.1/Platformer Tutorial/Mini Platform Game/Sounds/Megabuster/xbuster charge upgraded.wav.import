@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/xbuster charge upgraded.wav-7b9cf571263c7ecb5dbb1724e0a9ecdb.sample"
+
+[deps]
+
+source_file="res://Sounds/Megabuster/xbuster charge upgraded.wav"
+dest_files=[ "res://.import/xbuster charge upgraded.wav-7b9cf571263c7ecb5dbb1724e0a9ecdb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

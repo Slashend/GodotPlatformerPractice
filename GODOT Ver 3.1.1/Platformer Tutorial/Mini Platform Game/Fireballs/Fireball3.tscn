@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fireballs/Fireball.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/MMZX Model X/538.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/MMZX Model X/541.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "shoot",
+"speed": 5.0
+} ]
+
+[node name="Fireball3" index="0" instance=ExtResource( 1 )]
+damage = 5
+
+[node name="AnimatedSprite" parent="." index="0"]
+frames = SubResource( 1 )
+frame = 0
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 1, 0 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="VisibilityNotifier2D" parent="." index="2"]
+position = Vector2( 0.5, 0 )
+scale = Vector2( 1.25, 1.3 )

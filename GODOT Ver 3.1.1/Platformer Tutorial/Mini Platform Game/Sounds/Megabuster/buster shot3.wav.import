@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/buster shot3.wav-152b13b2713f8b87a3edc05a0896d73a.sample"
+
+[deps]
+
+source_file="res://Sounds/Megabuster/buster shot3.wav"
+dest_files=[ "res://.import/buster shot3.wav-152b13b2713f8b87a3edc05a0896d73a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
