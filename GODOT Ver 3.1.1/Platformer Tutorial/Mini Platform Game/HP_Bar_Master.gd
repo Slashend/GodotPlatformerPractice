@@ -16,7 +16,7 @@ export (bool) var will_pulse = false
 export (float, 0, 1, 0.05) var caution_threshold = 0.5
 export (float, 0, 1, 0.05) var danger_threshold = 0.2
 
-func changeValue(health, maxHealth, shouldTween):
+func changeValueDamage(health, maxHealth, shouldTween):
 	hp_bar_over.value = health*100/maxHealth # to avoid integer division resulting to zero
 	
 	if (shouldTween):
@@ -24,6 +24,17 @@ func changeValue(health, maxHealth, shouldTween):
 		updateTween.start()
 	elif (!shouldTween):
 		hp_bar_under.value = health*100/maxHealth
+		
+	assignColor(health, maxHealth)
+	
+func changeValueHeal(health, maxHealth, shouldTween):
+	hp_bar_under.value = health*100/maxHealth # to avoid integer division resulting to zero
+	
+	if (shouldTween):
+		updateTween.interpolate_property(hp_bar_over, "value", hp_bar_over.value, health*100/maxHealth, 0.4, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.25)
+		updateTween.start()
+	elif (!shouldTween):
+		hp_bar_over.value = health*100/maxHealth
 		
 	assignColor(health, maxHealth)
 

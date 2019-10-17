@@ -4,20 +4,22 @@ extends Node
 var current_scene = null
 
 var tempPlayerHealth = 100
+var tempPlayerMP = 100
 var tempPlayerScore = 0
 
 func _ready():
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
 
-func goto_scene(path, health, score, currScene):
+func goto_scene(path, health, mp, score, currScene):
 	tempPlayerHealth = health
 	tempPlayerScore = score
+	tempPlayerMP = mp
 	current_scene = currScene
 	call_deferred("_deferred_goto_scene",path)
 	
 func _deferred_goto_scene(path):
-	current_scene.free()	
+	current_scene.free()
 	var s = ResourceLoader.load(path)
 	current_scene = s.instance()
 	get_tree().get_root().add_child(current_scene)

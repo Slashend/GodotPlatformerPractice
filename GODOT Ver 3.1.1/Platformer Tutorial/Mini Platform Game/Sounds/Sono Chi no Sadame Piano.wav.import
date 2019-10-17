@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Sono Chi no Sadame Piano.wav-51599aac48e2b5078bb4f5ce1b603ea8.sample"
+
+[deps]
+
+source_file="res://Sounds/Sono Chi no Sadame Piano.wav"
+dest_files=[ "res://.import/Sono Chi no Sadame Piano.wav-51599aac48e2b5078bb4f5ce1b603ea8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

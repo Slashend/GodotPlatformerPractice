@@ -8,12 +8,12 @@
 [ext_resource path="res://Sprites/DIO/7.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/DIO/8.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/DIO/9.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/DIO/0.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/DIO/1.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/DIO/2.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/DIO/3.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/DIO/87.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/DIO/88.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/DIO/87.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/DIO/88.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/DIO/0.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/DIO/1.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/DIO/2.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/DIO/3.png" type="Texture" id=14]
 [ext_resource path="res://Sounds/Megabuster/buster shot hit wall.wav" type="AudioStream" id=15]
 [ext_resource path="res://Sounds/DIO Voices/Hitotsu chansu.wav" type="AudioStream" id=16]
 [ext_resource path="res://Sounds/DIO Voices/WRRRYYYY.wav" type="AudioStream" id=17]
@@ -27,19 +27,19 @@ animations = [ {
 "name": "Dash",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "SmallBlast",
+"name": "ZaWarudoDash",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
 "loop": true,
-"name": "ZaWarudoDash",
+"name": "SmallBlast",
 "speed": 5.0
 } ]
 
@@ -82,7 +82,6 @@ cast_to = Vector2( 0, 32.5 )
 [node name="DisappearTimer" type="Timer" parent="."]
 
 [node name="Sounds" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="BulletHit" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource( 15 )
@@ -97,7 +96,7 @@ volume_db = 12.0
 
 [node name="ZaWarudo" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 18 )
-volume_db = 12.0
+volume_db = 14.0
 
 [node name="Noroi" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 19 )

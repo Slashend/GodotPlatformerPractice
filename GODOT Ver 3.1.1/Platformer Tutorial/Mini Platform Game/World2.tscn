@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=2]
 [ext_resource path="res://DirtAutoTile.tres" type="TileSet" id=3]
 [ext_resource path="res://DIO.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Sounds/JJBA - Dark Rebirth (Theme of DIO).wav" type="AudioStream" id=5]
+[ext_resource path="res://LifeRecoveryItem.tscn" type="PackedScene" id=6]
 
 [node name="World2" type="Node"]
+editor/display_folded = true
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
@@ -35,3 +37,10 @@ damage = 20
 stream = ExtResource( 5 )
 volume_db = 9.0
 autoplay = true
+
+[node name="Powerups" type="Node" parent="."]
+
+[node name="LifeRecoveryItem" parent="Powerups" instance=ExtResource( 6 )]
+position = Vector2( 224, 640 )
+healthRecovered = 50
+size = Vector2( 2, 2 )
