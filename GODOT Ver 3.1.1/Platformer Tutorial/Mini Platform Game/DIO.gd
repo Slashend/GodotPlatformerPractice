@@ -76,12 +76,22 @@ func _physics_process(delta):
 			randomize()
 			chosenActionNum = rand_range(0,100)
 			
-			if (chosenActionNum >= 0 and chosenActionNum < 45):
+			if (chosenActionNum >= 0 and chosenActionNum < 40):
 				chosenAction = "Idle"
 				actionTimer = IDLE_TIME
-			elif (chosenActionNum >= 45 and chosenActionNum < 85):
+			elif (chosenActionNum >= 40 and chosenActionNum < 45):
+				chosenAction = "Idle"
+				actionTimer = IDLE_TIME
+				direction *= -1
+				
+			elif (chosenActionNum >= 45 and chosenActionNum < 80):
 				chosenAction = "Dash"
 				actionTimer = DASH_TIME
+			elif (chosenActionNum >= 80 and chosenActionNum < 85):
+				chosenAction = "Dash"
+				actionTimer = DASH_TIME
+				direction *= -1
+				
 			elif (chosenActionNum >= 85 and chosenActionNum < 95):
 				chosenAction = "SmallBlast"
 				actionTimer = SMALL_BLAST_TIME
