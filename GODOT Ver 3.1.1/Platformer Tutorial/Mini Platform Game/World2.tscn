@@ -29,6 +29,7 @@ editor/display_folded = true
 
 [node name="DIO" parent="Boss" instance=ExtResource( 4 )]
 position = Vector2( 736, 864 )
+z_index = 1
 health = 100
 speed = 250
 damage = 20

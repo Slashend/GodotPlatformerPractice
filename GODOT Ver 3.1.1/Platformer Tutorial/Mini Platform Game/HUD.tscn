@@ -5,18 +5,17 @@
 [ext_resource path="res://Other Images/HealthBar Simplified/Under.png" type="Texture" id=3]
 [ext_resource path="res://Other Images/HealthBar Simplified/Over.png" type="Texture" id=4]
 [ext_resource path="res://Other Images/HealthBar Simplified/Progress.png" type="Texture" id=5]
-[ext_resource path="res://Other Images/MPBar/Inner.png" type="Texture" id=6]
-[ext_resource path="res://Other Images/MPBar/Progress.png" type="Texture" id=7]
-[ext_resource path="res://MP_Bar.gd" type="Script" id=8]
+[ext_resource path="res://MP_Bar_Master.gd" type="Script" id=6]
+[ext_resource path="res://Other Images/MPBar/Inner.png" type="Texture" id=7]
+[ext_resource path="res://Other Images/MPBar/Progress.png" type="Texture" id=8]
 
 [node name="UI" type="Control"]
-editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="HP_Bar_Master" type="Sprite" parent="."]
-editor/display_folded = true
 scale = Vector2( 0.3, 0.3 )
+z_index = 20
 texture = ExtResource( 1 )
 centered = false
 script = ExtResource( 2 )
@@ -53,16 +52,16 @@ playback/repeat = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HP_Bar_Master/PulseTween"]
 
-[node name="MP_Bar" type="TextureProgress" parent="."]
+[node name="MP_Bar_Master" type="Sprite" parent="."]
+z_index = 20
+script = ExtResource( 6 )
+
+[node name="MP_Bar" type="TextureProgress" parent="MP_Bar_Master"]
 margin_left = 288.0
 margin_top = 36.5054
 margin_right = 628.0
 margin_bottom = 79.5054
 rect_scale = Vector2( 0.45, 0.3 )
 value = 100.0
-texture_under = ExtResource( 6 )
-texture_progress = ExtResource( 7 )
-script = ExtResource( 8 )
-healthy_color = Color( 0.156863, 0.156863, 0.156863, 1 )
-caution_color = Color( 0.470588, 0.470588, 0.470588, 1 )
-danger_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 8 )

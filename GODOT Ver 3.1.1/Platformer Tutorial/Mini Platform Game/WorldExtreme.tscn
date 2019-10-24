@@ -5,7 +5,6 @@
 [ext_resource path="res://Sounds/Sono Chi no Sadame Piano.wav" type="AudioStream" id=3]
 
 [node name="WorldExtreme" type="Node"]
-editor/display_folded = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 

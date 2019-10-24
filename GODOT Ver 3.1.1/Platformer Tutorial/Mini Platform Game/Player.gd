@@ -37,11 +37,11 @@ var score = 0
 """
 
 func _ready():
-	health = Global.tempPlayerHealth
-	mp = Global.tempPlayerMP
-	score = Global.tempPlayerScore
+	health = GlobalSingleton.tempPlayerHealth
+	mp = GlobalSingleton.tempPlayerMP
+	score = GlobalSingleton.tempPlayerScore
 	$UI/HP_Bar_Master.changeValueHeal(health,STARTING_HEALTH,false)
-	$UI/MP_Bar.changeValue(mp,STARTING_MP)
+	$UI/MP_Bar_Master.changeValue(mp,STARTING_MP)
 
 """
 ============================================ PLAYER DAMAGED FUNCTIONS ============================================
@@ -79,8 +79,8 @@ func killPlayer():
 	$Timer.start()
 
 func _on_Timer_timeout():
-	Global.tempPlayerHealth = STARTING_HEALTH
-	Global.tempPlayerScore = STARTING_SCORE
+	GlobalSingleton.tempPlayerHealth = STARTING_HEALTH
+	GlobalSingleton.tempPlayerScore = STARTING_SCORE
 	get_tree().change_scene("StartMenu.tscn")
 
 """
@@ -101,7 +101,7 @@ func _physics_process(delta):
 			IFrames -= 1
 		if (mp < STARTING_MP):
 			mp += 1
-			$UI/MP_Bar.changeValue(mp,STARTING_MP)
+			$UI/MP_Bar_Master.changeValue(mp,STARTING_MP)
 
 		"""
 		----------------------------------------- USER INPUT AND MOVEMENT -----------------------------------------
@@ -224,7 +224,7 @@ func _physics_process(delta):
 					
 			
 			# Reset animation
-			$UI/MP_Bar.changeValue(mp,STARTING_MP)
+			$UI/MP_Bar_Master.changeValue(mp,STARTING_MP)
 			$BusterAudio/chargeAudio.stop()
 			$ChargeshotSprite.play("Level1")
 			chargingTime = 0

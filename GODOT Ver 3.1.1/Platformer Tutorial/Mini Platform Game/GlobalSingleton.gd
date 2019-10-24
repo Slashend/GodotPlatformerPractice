@@ -1,11 +1,11 @@
-# Global.gd
+# GlobalSingleton.gd
 extends Node
 
-var current_scene = null
+onready var current_scene = null
 
-var tempPlayerHealth = 100
-var tempPlayerMP = 100
-var tempPlayerScore = 0
+onready var tempPlayerHealth = 100
+onready var tempPlayerMP = 100
+onready var tempPlayerScore = 0
 
 func _ready():
 	var root = get_tree().get_root()
