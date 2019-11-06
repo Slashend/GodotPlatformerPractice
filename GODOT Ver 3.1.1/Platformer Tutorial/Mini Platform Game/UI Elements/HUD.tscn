@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Other Images/HealthBar Simplified/HPBackground.png" type="Texture" id=1]
+[ext_resource path="res://UI Elements/HP_Bar_Master.gd" type="Script" id=2]
+[ext_resource path="res://Other Images/HealthBar Simplified/Under.png" type="Texture" id=3]
+[ext_resource path="res://Other Images/HealthBar Simplified/Over.png" type="Texture" id=4]
+[ext_resource path="res://Other Images/HealthBar Simplified/Progress.png" type="Texture" id=5]
+[ext_resource path="res://UI Elements/MP_Bar_Master.gd" type="Script" id=6]
+[ext_resource path="res://Other Images/MPBar/Inner.png" type="Texture" id=7]
+[ext_resource path="res://Other Images/MPBar/Progress.png" type="Texture" id=8]
+
+
+[node name="UI" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="HP_Bar_Master" type="Sprite" parent="."]
+scale = Vector2( 0.3, 0.3 )
+z_index = 20
+texture = ExtResource( 1 )
+centered = false
+script = ExtResource( 2 )
+healthy_color = Color( 0.521569, 0.901961, 0.0823529, 1 )
+will_pulse = true
+
+[node name="HP_Bar_Red" type="TextureProgress" parent="HP_Bar_Master"]
+margin_left = 332.135
+margin_top = 52.2068
+margin_right = 1511.14
+margin_bottom = 142.207
+rect_rotation = 0.00271334
+value = 100.0
+texture_under = ExtResource( 3 )
+texture_over = ExtResource( 4 )
+texture_progress = ExtResource( 5 )
+tint_progress = Color( 1, 0, 0, 1 )
+
+[node name="HP_Bar_Green" type="TextureProgress" parent="HP_Bar_Master"]
+margin_left = 332.135
+margin_top = 52.2068
+margin_right = 1511.13
+margin_bottom = 142.207
+rect_rotation = 0.00271334
+value = 100.0
+texture_progress = ExtResource( 5 )
+
+[node name="UpdateTween" type="Tween" parent="HP_Bar_Master"]
+
+[node name="PulseTween" type="Tween" parent="HP_Bar_Master"]
+editor/display_folded = true
+repeat = true
+playback/repeat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HP_Bar_Master/PulseTween"]
+
+[node name="MP_Bar_Master" type="Sprite" parent="."]
+z_index = 20
+script = ExtResource( 6 )
+
+[node name="MP_Bar" type="TextureProgress" parent="MP_Bar_Master"]
+margin_left = 288.0
+margin_top = 36.5054
+margin_right = 628.0
+margin_bottom = 79.5054
+rect_scale = Vector2( 0.45, 0.3 )
+value = 100.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 8 )

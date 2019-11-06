@@ -16,12 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Mini Platform Game"
-run/main_scene="res://StartMenu.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://UI Elements/StartMenu.tscn"
+config/icon="res://UI Elements/icon.png"
 
 [autoload]
 
-GlobalSingleton="*res://GlobalSingleton.gd"
+GlobalSingleton="*res://Worlds/GlobalSingleton.gd"
 
 [display]
 
@@ -35,4 +35,4 @@ window/stretch/aspect="expand"
 [rendering]
 
 quality/2d/use_pixel_snap=true
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://Tilesets/default_env.tres"
